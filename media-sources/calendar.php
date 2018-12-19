@@ -32,9 +32,18 @@ function getCalendarEvents(){
       
       if ($date == $today) {
           $counter++;
-        $eventString = $eventString . "At ".$event['DSTART']." you have ".$event["SUMMARY"].".<break strength='strong'/> ";
+            $date = $event['DTSTART'];//get date from ical
+            $date = str_replace('T', '', $date);//remove T
+            $date = str_replace('Z', '', $date);//remove Z
+            $d    = date('d', strtotime($date));//get date day
+            $m    = date('m', strtotime($date));//get date month
+            $y    = date('Y', strtotime($date));//get date year
+            $now = date('G:i:s');//current date and time
+            $eventdate = date('G:i', strtotime($date));//user friendly date
+        $eventString = $eventString . "At ".$eventdate." you have ".$event["SUMMARY"].".<break strength='strong'/> ";
       }
   }
+
 
   if ($counter == 1){
     $countString =  'You have '.$counter.' event in your calendar for today. <break strength="strong"/>';    

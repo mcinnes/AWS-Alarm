@@ -42,8 +42,8 @@ $config = [
   'version' => 'latest',
   'region' => 'us-west-2', // Change this to your respective AWS region
   'credentials' => [ // Change these to your respective AWS credentials
-    'key' => 'AKIAI7NGLTLK5XDKAHQQ',
-    'secret' => 'WRErikjHC27LId87oiukJTCjBLPgU3u/L8YFGP8+',
+    'key' => '',
+    'secret' => '',
   ]
 ];
 
@@ -68,6 +68,9 @@ file_put_contents('ssml1.mp3', $newsResponse['AudioStream']);
 file_put_contents('combined.mp3',
   file_get_contents('ssml.mp3') .
   file_get_contents('ssml1.mp3'));
+
+echo '<br><br> <a href="combined.mp3">View Output</a>';
+
 // DEBUG
 //print_r($response); exit;
 //todo

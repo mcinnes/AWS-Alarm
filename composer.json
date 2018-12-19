@@ -1,0 +1,8 @@
+{
+    "require": {
+        "aws/aws-sdk-php": "^3.25",
+        "miniflux/picofeed": "@stable",
+        "parse/php-sdk" : "1.4.*"
+        
+    }
+}

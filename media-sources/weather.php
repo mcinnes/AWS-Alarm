@@ -2,7 +2,7 @@
 
 function getWeatherString(){
   //Get the weather
-  $json_url = 'https://api.openweathermap.org/data/2.5/weather?lat=-37.9260865&lon=145.345690&units=metric&appid=fbd6045d4e979779640c901fe2126714';
+  $json_url = 'https://api.openweathermap.org/data/2.5/weather?lat=-37.9260865&lon=145.345690&units=metric&appid=';
   // jSON String for request
   // Initializing curl
 
